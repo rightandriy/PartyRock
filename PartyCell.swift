@@ -23,6 +23,20 @@ class PartyCell: UITableViewCell {
     func UpdateUI (partyRock: PartyRock) {
         videoTitle.text = partyRock.VideoTitle
         
+        let url = URL(string: partyRock.imgURL)!
+        
+        DispatchQueue.global().async {
+            do{
+                let data = try Data(contentsOf: url)
+                DispatchQueue.global().sync {
+                    self.videoPreviewImage.image = UIImage(data: data)
+                    
+                }
+            }catch  {
+                
+            }
+        }
+        
     }
 
 }
