@@ -69,7 +69,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="83"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="XKR-3y-g6l" id="E5P-9W-7FD">
-                                            <frame key="frameInset" width="375" height="82"/>
+                                            <frame key="frameInset" width="375" height="82.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="partybanner" translatesAutoresizingMaskIntoConstraints="NO" id="Moq-5z-6g1">
@@ -144,14 +144,29 @@
                                     <constraint firstAttribute="height" constant="180" id="VlT-4g-v3R"/>
                                 </constraints>
                             </webView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KYX-Ue-17x">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="76" id="uoL-4e-MIv"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="StillTime-Regular" family="Still Time" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="TEz-PS-Zvu" secondAttribute="trailing" id="0sh-jD-QsF"/>
                             <constraint firstItem="TEz-PS-Zvu" firstAttribute="top" secondItem="nrc-r5-yL7" secondAttribute="top" id="ArL-Vl-vlo"/>
+                            <constraint firstItem="KYX-Ue-17x" firstAttribute="leading" secondItem="nrc-r5-yL7" secondAttribute="leading" constant="5" id="Bzb-2J-3vM"/>
                             <constraint firstItem="TEz-PS-Zvu" firstAttribute="leading" secondItem="nrc-r5-yL7" secondAttribute="leading" id="Fqe-pF-N0R"/>
+                            <constraint firstAttribute="trailing" secondItem="KYX-Ue-17x" secondAttribute="trailing" constant="5" id="Z9H-PX-zMC"/>
+                            <constraint firstItem="KYX-Ue-17x" firstAttribute="top" secondItem="TEz-PS-Zvu" secondAttribute="bottom" constant="50" id="e3E-0J-6U0"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="titleLbl" destination="KYX-Ue-17x" id="OgS-OL-F60"/>
+                        <outlet property="webView" destination="TEz-PS-Zvu" id="M7A-fk-Rk4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="n2B-AR-Ddc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

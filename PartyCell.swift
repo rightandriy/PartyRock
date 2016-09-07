@@ -17,26 +17,25 @@ class PartyCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
-    }
-
-    func UpdateUI (partyRock: PartyRock) {
-        videoTitle.text = partyRock.VideoTitle
         
-        let url = URL(string: partyRock.imgURL)!
+    }
+    
+    func updateUI(partyRock: PartyRock) {
+        videoTitle.text = partyRock.videoTitle
+        
+        let url = URL(string: partyRock.imageURL)!
         
         DispatchQueue.global().async {
-            do{
+            do {
                 let data = try Data(contentsOf: url)
                 DispatchQueue.global().sync {
                     self.videoPreviewImage.image = UIImage(data: data)
-                    
                 }
-            }catch  {
-                
+            } catch  {
+                //handle the error
             }
         }
         
     }
-
+    
 }

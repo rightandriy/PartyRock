@@ -8,27 +8,28 @@
 
 import Foundation
 
+
 class PartyRock {
-    private var _ImgURL: String!
-    private var _VideoURL: String!
-    private var _VideoTitle: String!
+    private var _imageURL: String!
+    private var _videoURL: String!
+    private var _videoTitle: String!
     
-    var imgURL:String {
-        return _ImgURL
+    var imageURL: String {
+        return _imageURL
     }
     
-    var VideoURL: String {
-        return _VideoURL
+    var videoURL: String {
+        return _videoURL
     }
     
-    var VideoTitle:String{
-        return _VideoTitle
+    var videoTitle: String {
+        return _videoTitle
     }
     
-    
-    init(imgURL:String, videoURL:String, videoTitle:String) {
-        _ImgURL = imgURL
-        _VideoURL = videoURL
-        _VideoTitle = videoTitle
+    init(imageURL: String, videoURL: String, videoTitle: String) {
+        
+        _imageURL = imageURL
+        _videoURL = videoURL
+        _videoTitle = videoTitle
     }
 }
